@@ -1,7 +1,10 @@
+//Imports
 import java.util.stream.Stream;
 import java.util.stream.*;
 import java.io.File.*;
 import java.nio.file.*;
+
+//Value storage class, because using streams
 class vars{
     int sum=0;
     int min= Integer.MAX_VALUE;
@@ -9,17 +12,20 @@ class vars{
     int counter=0;
 }
 
+
 public class App {
+    
     public static void main(String[] args) throws Exception {
 
         System.out.println("Hello, World!");
         Stream<String> st = Files.lines(Paths.get("C:/codes/expenseProcessor/dataFile.txt"));
-        System.out.println(calcMean(st));
+        System.out.println(calcMean(st));               //can change method call here
         st.close();
 
     }
 
     public static int sumAll(Stream<String> st){
+        
         vars vars = new vars();
         st
         .map((x) -> x.split(" "))
@@ -42,6 +48,7 @@ public class App {
     }
 
     public static float calcMean(Stream<String> st){
+        
         vars sum = new vars();
         st
         .map((x) -> x.split(" "))
