@@ -15,6 +15,7 @@ class vars{
 
 public class App {
     
+    //Main function
     public static void main(String[] args) throws Exception {
 
         System.out.println("Hello, World!");
@@ -24,6 +25,7 @@ public class App {
 
     }
 
+    //Function to calculate total expenditure
     public static int sumAll(Stream<String> st){
         
         vars vars = new vars();
@@ -35,6 +37,7 @@ public class App {
         return vars.sum;
     }
 
+    //Function to calculate Average expenditure
     public static double calcAverage(Stream<String> st){
         
         double avg = st
@@ -47,6 +50,7 @@ public class App {
 
     }
 
+    //Function to calculate the mean of all the expenditues
     public static float calcMean(Stream<String> st){
         
         vars sum = new vars();
